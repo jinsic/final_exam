@@ -1,11 +1,11 @@
 package com.example.sm.problem3;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
+
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
         for(CustomerThread ct : list){
 
             try {
+                Thread a = new Thread();
+                Thread b = new Thread();
+
+                
                 // need something here
             } catch (InterruptedException e) { }
         }
@@ -70,6 +74,11 @@ class Customer extends Person{
         this.name = name;
     }
 
+    @Override
+    void work() {
+
+    }
+
     // need something here
 }
 
@@ -83,7 +92,7 @@ class Manager extends Person{
 
     void sort(){ // 직접 소팅 알고리즘을 이용하여 코딩해야함. 자바 기본 정렬 메소드 이용시 감
 
-        // need something here
+
 
     }
 
