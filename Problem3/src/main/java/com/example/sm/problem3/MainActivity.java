@@ -91,9 +91,17 @@ class Manager extends Person{
     }
 
     void sort(){ // 직접 소팅 알고리즘을 이용하여 코딩해야함. 자바 기본 정렬 메소드 이용시 감
+        for(int i = 0;i<list.size();++i)
+            for(int j = i ; j<list.size();++j)
+            {
+                if(list.get(j).spent_money>list.get(j+1).spent_money)
+                {
+                    Customer tmp = list.get(j);
+                    list.set(j,list.get(j+1));
+                    list.set(j+1,tmp);
+                }
 
-
-
+            }
     }
 
     @Override
